@@ -1,16 +1,16 @@
-uuid: e7b75398-0623-48a7-8096-c905e80c8e7f
+uuid: d7a30340-8a61-4672-b9b8-2cea5c04f07a
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - metasite_drupal
 _core:
   default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
-id: bartik_powered
-theme: bartik
-region: footer_fifth
+id: metasite_drupal_powered
+theme: metasite_drupal
+region: content
 weight: 10
 provider: null
 plugin: system_powered_by_block

@@ -1,13 +1,13 @@
-uuid: f3bccbf6-2f9f-4091-8039-863237286d14
+uuid: 9b7fcd49-8557-42c6-a5a4-df003cb49138
 langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
+    - metasite_drupal
 _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
-id: bartik_page_title
-theme: bartik
+id: metasite_drupal_page_title
+theme: metasite_drupal
 region: content
 weight: -50
 provider: null

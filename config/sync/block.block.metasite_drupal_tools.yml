@@ -1,4 +1,4 @@
-uuid: 06f02bfb-830e-4d0d-9e8e-4c3494345f2e
+uuid: 667b5805-f619-4f98-93f6-94331b1b609a
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
+    - metasite_drupal
 _core:
   default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
-id: bartik_tools
-theme: bartik
-region: sidebar_first
+id: metasite_drupal_tools
+theme: metasite_drupal
+region: content
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'

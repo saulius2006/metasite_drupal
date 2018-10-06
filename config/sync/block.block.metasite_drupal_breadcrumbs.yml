@@ -1,16 +1,16 @@
-uuid: 0f1398ff-5eeb-48c6-91d0-d56cf587e3b6
+uuid: fc4b18f0-79cf-4bbd-b1d5-0a84c9f9f6ed
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - metasite_drupal
 _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
-id: bartik_breadcrumbs
-theme: bartik
-region: breadcrumb
+id: metasite_drupal_breadcrumbs
+theme: metasite_drupal
+region: content
 weight: 0
 provider: null
 plugin: system_breadcrumb_block

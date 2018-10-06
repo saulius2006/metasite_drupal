@@ -1,16 +1,16 @@
-uuid: 38ea81e6-357c-47aa-8a78-dc27f987b461
+uuid: 2d879d77-9fb0-4968-9303-1a15052252a2
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - metasite_drupal
 _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: bartik_messages
-theme: bartik
-region: highlighted
+id: metasite_drupal_messages
+theme: metasite_drupal
+region: content
 weight: 0
 provider: null
 plugin: system_messages_block

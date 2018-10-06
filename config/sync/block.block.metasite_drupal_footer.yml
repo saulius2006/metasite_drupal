@@ -1,4 +1,4 @@
-uuid: 410542c2-fd37-46af-b487-026123d64648
+uuid: e99342dd-603b-469c-8e87-2272dc5d2f36
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
+    - metasite_drupal
 _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
-id: bartik_footer
-theme: bartik
-region: footer_fifth
+id: metasite_drupal_footer
+theme: metasite_drupal
+region: content
 weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
