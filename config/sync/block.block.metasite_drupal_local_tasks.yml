@@ -9,7 +9,7 @@ _core:
 id: metasite_drupal_local_tasks
 theme: metasite_drupal
 region: content
-weight: -40
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:

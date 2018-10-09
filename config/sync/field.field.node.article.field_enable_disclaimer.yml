@@ -1,0 +1,23 @@
+uuid: f2806fb0-3d18-4e4f-ad38-647a3a6b8c32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enable_disclaimer
+    - node.type.article
+id: node.article.field_enable_disclaimer
+field_name: field_enable_disclaimer
+entity_type: node
+bundle: article
+label: 'Enable disclaimer'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

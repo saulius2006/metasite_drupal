@@ -9,7 +9,7 @@ _core:
 id: metasite_drupal_page_title
 theme: metasite_drupal
 region: content
-weight: -50
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

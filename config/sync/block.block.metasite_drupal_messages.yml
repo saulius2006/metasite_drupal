@@ -11,7 +11,7 @@ _core:
 id: metasite_drupal_messages
 theme: metasite_drupal
 region: content
-weight: 0
+weight: 3
 provider: null
 plugin: system_messages_block
 settings:

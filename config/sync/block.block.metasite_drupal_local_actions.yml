@@ -9,7 +9,7 @@ _core:
 id: metasite_drupal_local_actions
 theme: metasite_drupal
 region: content
-weight: -20
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

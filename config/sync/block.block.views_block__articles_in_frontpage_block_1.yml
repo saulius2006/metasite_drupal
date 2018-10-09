@@ -1,0 +1,30 @@
+uuid: 8d827b36-7ee3-4c6a-b2c8-3a9afc31fe43
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.articles_in_frontpage
+  module:
+    - system
+    - views
+  theme:
+    - metasite_drupal
+id: views_block__articles_in_frontpage_block_1
+theme: metasite_drupal
+region: content
+weight: 4
+provider: null
+plugin: 'views_block:articles_in_frontpage-block_1'
+settings:
+  id: 'views_block:articles_in_frontpage-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
