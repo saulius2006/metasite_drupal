@@ -2,7 +2,7 @@
     background: rgba(100,100,100,0.9);
 
 }
-.dialog-off-canvas-main-canvas .node--type-article > .node__content{
+.blur{
     filter: blur(3px);
 }
 

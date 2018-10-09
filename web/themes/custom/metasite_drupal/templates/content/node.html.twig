@@ -103,15 +103,15 @@
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content|without('disclaimer_content') }}
   </div>
-  {% if disclaimer %}
-    <div class="modal fade" id="disclaimerModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            {{ disclaimer }}
-          </div>
+</article>
+{% if disclaimer %}
+  <div class="modal fade" id="disclaimerModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          {{ disclaimer }}
         </div>
       </div>
     </div>
-  {% endif %}
-</article>
+  </div>
+{% endif %}
