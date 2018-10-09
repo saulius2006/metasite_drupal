@@ -1,0 +1,44 @@
+<?php
+
+use \GuzzleHttp\Cookie\SetCookie;
+
+/**
+ * Implements hook_ENTITY_TYPE_view_alter().
+ */
+function metasite_disclaimer_node_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+
+  if($display->id() == 'node.article.default' && $entity->field_enable_disclaimer->value === '1') {
+    \Drupal::service('page_cache_kill_switch')->trigger();
+    $build['#cache']['max-age'] = 0;
+
+    if (empty($_COOKIE['Drupal_visitor_metasite_disclaimer_accecpted_nid_'.$entity->id()]) || $_COOKIE['Drupal_visitor_metasite_disclaimer_accecpted_nid_'.$entity->id()] !== 'true') {
+
+      //hide the actual node
+      $build['actual_node_prefix'] = [
+        '#type' => 'inline_template',
+        '#template' => '{{ content|raw }}',
+        '#context' => [
+          'content' => '<div style="display: none">'
+        ],
+        '#wheight' => -1000,
+      ];
+      $build['actual_node_prefix']['#weight'] = -1000;
+      $build['actual_node_suffix']['#markup'] = '</div>';
+      $build['actual_node_suffix']['#weight'] = 999;
+
+      //load contents of disclaimer node
+      $nid = 52; //@todo add ability to change it for administrators
+      $entity_type = 'node';
+      $view_mode = 'full';
+      $node = \Drupal::entityTypeManager()->getStorage($entity_type)->load($nid);
+      $build['disclaimer_content'] = \Drupal::entityTypeManager()->getViewBuilder($entity_type)->view($node, $view_mode);
+      $build['disclaimer_content']['#prefix'] = '<div class=disclaimer-content>';
+      $build['disclaimer_content']['#suffix'] = '</div>';
+      $build['disclaimer_content']['#weight'] = 1000;
+
+      $build['disclaimer_content']['form'] = \Drupal::formBuilder()->getForm(Drupal\metasite_disclaimer\Form\SubmitDisclaimerForm::class, $entity->id());
+      $build['disclaimer_content']['form']['#weight'] = 500;
+
+    }
+  }
+}

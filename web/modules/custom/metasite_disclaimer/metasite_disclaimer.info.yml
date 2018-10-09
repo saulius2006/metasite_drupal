@@ -1,0 +1,7 @@
+type: module
+name: Metasite disclaimer
+description: Show disclaimer on selected Articles
+package: Metasite
+
+core: 8.x
+
